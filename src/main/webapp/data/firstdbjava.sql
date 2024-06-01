@@ -39,8 +39,8 @@ CREATE TABLE `contact` (
 -- Déchargement des données de la table `contact`
 --
 
-INSERT INTO `contact` (`idContact`, `nom`, `tel`, `email`, `adresse`) VALUES
-(1, 'Sanogo Mohamed', '79791639', 'ibrahimakeita941@gmail.com', 'Bacodjicoroni ACI rue:665 porte:1415');
+INSERT INTO `contact` (`idContact`, `nom`, `tel`, `email`, `adresse`, `competence`) VALUES
+(1, 'Sanogo Mohamed', '79791639', 'ibrahimakeita941@gmail.com', 'Bacodjicoroni ACI', 'Java');
 
 -- --------------------------------------------------------
 
