@@ -81,10 +81,10 @@
                                             <td>${apprenant.adresse}</td>
                                             <td>${apprenant.competence}</td>
                                             <td>
-                                                <a href="EditApprenantServlet?id=${apprenant.idContact}" class="btn btn-primary btn-sm">
+                                                <a href="EditApprenantServlet?idContact=${apprenant.idContact}" class="btn btn-primary btn-sm">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                <a href="DeleteApprenantServlet?id=${apprenant.idContact}" class="btn btn-danger btn-sm">
+                                                <a href="deleteApprenant?idContact=${apprenant.idContact}" class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
