@@ -1,0 +1,165 @@
+@charset "ISO-8859-1";
+
+/* import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: rgb(226, 226, 226);
+  user-select: none;
+}
+a{
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+
+/* Main Section */
+.main {
+  position: relative; 
+  width: 100%;
+}
+
+/* Attendance List section */
+.attendance {
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.attendance-list {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-list .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.head a {
+  padding: 6px 20px;
+  border-radius: 10px;
+  background: #4AD489;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #4AD489;
+}
+
+.head a:hover {
+  background: transparent;
+  color: black;
+  transition: 0.5rem;
+}
+
+.head input {
+  border: 3px solid #4AD489;
+  padding: 6px 20px;
+  border-radius: 10px;
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  text-align: center; /* Center table data */
+}
+
+.table-responsive {
+  max-height: 350px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scroll */
+}
+
+table thead tr {
+  color: #fff;
+  background: #34AF6D;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: center; /* Center table data */
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #4AD489;
+}
+
+.table a.btn {
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.table a.btn-primary {
+  background: #007bff;
+  border: 1px solid #007bff;
+}
+
+.table a.btn-danger {
+  background: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 750px) {
+  .main-top h1 {
+    font-size: 13px;
+  }
+
+  .attendance-list .head {
+    padding: 2px;
+    gap: 5px;
+  }
+
+  .head input {
+    padding: 2px 4px;
+    font-size: 8px;
+  }
+
+  .head h1 {
+    font-size: 8px;
+  }
+
+  .head a {
+    padding: 2px 4px;
+    font-size: 8px;
+  }
+
+  .table th,
+  .table td {
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+}

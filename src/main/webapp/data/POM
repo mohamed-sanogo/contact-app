@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mycompany</groupId>
+    <artifactId>contact-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>contact-app</name>
+
+    <properties>
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>uk.org.ponder.pure-poms</groupId>
+            <artifactId>standard-jar</artifactId>
+            <version>POM-6</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency> 
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <compilerArguments>
+                        <endorseddirs>${endorsed.dir}</endorseddirs>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${endorsed.dir}</outputDirectory>
+                            <silent>true</silent>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>javax</groupId>
+                                    <artifactId>javaee-endorsed-api</artifactId>
+                                    <version>7.0</version>
+                                    <type>jar</type>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+<!-- pom of chat -->
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mycompany</groupId>
+    <artifactId>contact-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>contact-app</name>
+
+    <properties>
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>uk.org.ponder.pure-poms</groupId>
+            <artifactId>standard-jar</artifactId>
+            <version>POM-6</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <compilerArguments>
+                        <endorseddirs>${endorsed.dir}</endorseddirs>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${endorsed.dir}</outputDirectory>
+                            <silent>true</silent>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>javax</groupId>
+                                    <artifactId>javaee-endorsed-api</artifactId>
+                                    <version>7.0</version>
+                                    <type>jar</type>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+<!-- pom of chat -->
+
+<!-- liste apprenant of chat -->
+
+<%@page import="java.util.List"%>
+<%@page import="com.mycompany.contact.app.Apprenant"%>
+<%@page import="com.mycompany.contact.app.ApprenantDAO"%>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
+<%
+    if (session.getAttribute("nomUser") == null) {
+        response.sendRedirect("login.jsp");
+    }
+%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Gestion Apprenants | Liste Apprenant</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+              rel="stylesheet" type="text/css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+            rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/index-styles.css" rel="stylesheet" />
+        <link href="css/styleTable.css" rel="stylesheet" />
+    </head>
+    <body> 
+        <%
+            ApprenantDAO apprenantDAO = new ApprenantDAO();
+            List<Apprenant> listApprenants = apprenantDAO.selectAllApprenants();
+            request.setAttribute("listApprenants", listApprenants);
+
+        %>
+       	<!-- Navigation-->
+        <nav
+            class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
+            id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><%=session.getAttribute("nomUser")%></a>
+                <button
+                    class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+                    type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    Menu <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto"> 
+                        <li class="nav-item mx-0 mx-lg-1"><a
+                                class="nav-link py-3 px-0 px-lg-3 rounded" href="index.jsp">ACCEUIL</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a
+                                class="nav-link py-3 px-0 px-lg-3 rounded" href="./listeApprenant.jsp">APPRENANTS</a></li>
+                        <li class="nav-item mx-0 mx-lg-1 bg-danger"><a
+                                class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Deconnexion</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="masthead bg-primary   text-center">
+
+            <div class="container">
+                <section class="main" id="main">
+                    <section class="attendance">
+                        <div class="attendance-list">
+                            <div class="head">
+                                <h1>Liste des Apprenants</h1>
+                                <!-- <input type="text" id="find" placeholder="Recherche" /> -->
+                                <a href="./addApprenant.jsp">Nouveau apprenant</a>
+                            </div>
+                            <table class="table" >
+                                <thead>
+                                    <tr>
+                                        <th>Nom</th>
+                                        <th>Tel</th>
+                                        <th>Email</th>
+                                        <th>Adresse</th>
+                                        <th>Competence</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach var="apprenant" items="${listApprenants}">
+                                        <tr>
+                                            <td>${apprenant.nom}</td>
+                                            <td>${apprenant.tel}</td>
+                                            <td>${apprenant.email}</td>
+                                            <td>${apprenant.adresse}</td>
+                                            <td>${apprenant.competence}</td>
+                                            <td>
+                                                <a href="EditApprenantServlet?id=${apprenant.id}">Modifier</a>
+                                                <a href="DeleteApprenantServlet?id=${apprenant.id}">Supprimer</a>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    </header>
+
+
+
+
+                    <!-- Bootstrap core JS-->
+                    <script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+                    <!-- Core theme JS-->
+                    <script src="js/scripts.js"></script>
+                    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+                    <!-- * *                               SB Forms JS                               * *-->
+                    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+                    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+                    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> 
+                    </body>
+                    </html>
+
+<!-- liste apprenant of chat -->
+
+
+
+<!-- liste of maiga -->
+<%-- 
+    Document   : listeApprenant
+    Created on : 29 mai 2024, 10:57:42
+    Author     : mohamed.sanogo1
+--%>
+
+<%@page import="java.util.List"%>
+<%@page import="com.mycompany.contact.app.Apprenant"%>
+<%@page import="com.mycompany.contact.app.ApprenantDAO"%> 
+
+<%
+    if (session.getAttribute("nomUser") == null) {
+        response.sendRedirect("login.jsp");
+    }
+%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Gestion Apprenants | Liste Apprenant</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/index-styles.css" rel="stylesheet" />
+    <link href="css/styleTable.css" rel="stylesheet" />
+</head>
+<body>
+<%
+    ApprenantDAO apprenantDAO = new ApprenantDAO();
+    List<Apprenant> listApprenants = apprenantDAO.selectAllApprenants();
+    request.setAttribute("listApprenants", listApprenants);
+%>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top"><%=session.getAttribute("nomUser")%></a>
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.jsp">ACCEUIL</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./listeApprenant.jsp">APPRENANTS</a></li>
+                <li class="nav-item mx-0 mx-lg-1 bg-danger"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Deconnexion</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="masthead bg-primary text-center">
+    <div class="container">
+        <section class="main" id="main">
+            <section class="attendance">
+                <div class="attendance-list">
+                    <div class="head">
+                        <h1>Liste des Apprenants</h1>
+                        <a href="./addApprenant.jsp">Nouveau apprenant</a>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Tel</th>
+                                <th>Email</th>
+                                <th>Adresse</th>
+                                <th>Competence</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(listApprenants != null){ %>
+                            <% for (Apprenant okApp : listApprenants ){ %>
+                                <tr>
+                                    <td><%= okApp.getNom()%></td>
+                                    <td><%= okApp.getTel()%></td>
+                                    <td><%= okApp.getAdresse()%></td>
+                                    <td><%= okApp.getEmail()%></td>
+                                    <td><%= okApp.getCompetence()%></td>
+                                    <td>
+                                        <a href="EditApprenantServlet?id=<%= okApp.getId()%>">Modifier</a>
+                                        <a href="DeleteApprenantServlet?id=<%= okApp.getId()%>">Supprimer</a>
+                                    </td>
+                                </tr>
+                            <% } %>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+    </div>
+</header>
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- SB Forms JS-->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> 
+</body>
+</html>
+
+<!-- liste of maiga -->
